@@ -46,15 +46,15 @@ jobs:
 
 ## Workflow options
 
-If you want a more custom experience you can tweak these values. For more detailed explanation of the workflow file, check out the [GitHub documentation](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
+If you want a more custom experience you can add these values. For more detailed explanation of the workflow file, check out the [GitHub documentation](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
 
-| Setting | Description | Values |
-| --- | --- | --- |
-| `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` |
-| `site-directory` | The name of the project | `Backlog` |
-| `commit-name` | The name of the user doing the deploy commit | `Alex Page` |
-| `commit-email` | The email of the user doing the deploy commit | `alex@alepage.com.au` |
-| `commit-message` | The commit message for the branch | `Deployed using Blazing fast GitHub Pages deploy action` |
+| Setting | Description | Values | Required |
+| --- | --- | --- | --- |
+| `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` | `true` |
+| `site-directory` | The site directory | `_site` | `true` |
+| `commit-name` | The name of the user doing the deploy commit | Alex Page | `true` |
+| `commit-email` | The email of the user doing the deploy commit | alex@alepage.com.au | `true` |
+| `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `false` |
 
 
 ## Release History
