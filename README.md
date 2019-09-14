@@ -5,7 +5,7 @@
 
 ## Why did you make another action to deploy to GitHub pages?
 
-This GitHub action uses JavaScript only for maximum speed 🚀
+This GitHub action uses JavaScript only for [maximum speed](https://help.github.com/en/articles/about-actions#javascript-actions) 🚀
 
 
 ## Usage
