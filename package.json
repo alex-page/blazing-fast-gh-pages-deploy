@@ -1,6 +1,6 @@
 {
   "name": "blazing-fast-gh-pages-deploy",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.2",
   "description": "🔥 The most blazingest action to deploy your GitHub pages website",
   "private": true,
   "main": "dist/index.js",
