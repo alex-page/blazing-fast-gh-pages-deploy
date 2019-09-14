@@ -1,0 +1,48 @@
+{
+  "name": "blazing-fast-gh-pages-deploy",
+  "version": "0.0.0-alpha.1",
+  "description": "🔥 The most blazingest action to deploy your GitHub pages website",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "ncc build index.js --watch --minify",
+    "build": "ncc build index.js --minify",
+    "test": "xo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-page/automate-project-columns.git"
+  },
+  "keywords": [
+    "github-actions",
+    "github-projects",
+    "issues",
+    "pulls",
+    "automation",
+    "columns"
+  ],
+  "author": "Alex Page <alex@alexpage.com.au>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alex-page/automate-project-columns/issues"
+  },
+  "homepage": "https://github.com/alex-page/automate-project-columns#readme",
+  "dependencies": {
+    "@actions/core": "^1.0.0",
+    "gh-pages": "^2.1.1",
+    "last-commit-log": "^2.1.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.4",
+    "husky": "^3.0.5",
+    "xo": "^0.24.0"
+  },
+  "files": [
+    "dist/index.js"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && git add ./dist/index.js"
+    }
+  }
+}
