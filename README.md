@@ -29,6 +29,12 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
+      - name: npm install, test and build
+        run: |
+          npm install
+          npm run test
+          npm run build
       - name: Deploy site to gh-pages branch
         uses: alex-page/blazing-fast-gh-pages-deploy@v0.0.0
         with:
