@@ -59,4 +59,5 @@ If you want a more custom experience you can tweak these values. For more detail
 
 ## Release History
 
+- v0.0.1 - TypesScript, use callback instead of async
 - v0.0.0 - Initial release

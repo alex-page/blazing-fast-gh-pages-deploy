@@ -1,12 +1,12 @@
 {
   "name": "blazing-fast-gh-pages-deploy",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.1",
   "description": "🔥 The most blazingest action to deploy your GitHub pages website",
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "watch": "ncc build index.js --watch --minify",
-    "build": "ncc build index.js --minify",
+    "watch": "ncc build index.ts --watch --minify",
+    "build": "ncc build index.ts --minify",
     "test": "xo"
   },
   "repository": {
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/alex-page/automate-project-columns#readme",
   "dependencies": {
     "@actions/core": "^1.0.0",
+    "@types/gh-pages": "^2.0.0",
     "gh-pages": "^2.1.1",
     "last-commit-log": "^2.1.0"
   },
