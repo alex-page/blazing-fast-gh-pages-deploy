@@ -1,6 +1,6 @@
 {
   "name": "blazing-fast-gh-pages-deploy",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.1",
   "description": "🔥 The most blazingest action to deploy your GitHub pages website",
   "private": true,
   "main": "dist/index.js",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/alex-page/automate-project-columns#readme",
   "dependencies": {
     "@actions/core": "^1.0.0",
+    "@actions/github": "^1.1.0",
     "@types/gh-pages": "^2.0.0",
     "gh-pages": "^2.1.1",
     "last-commit-log": "^2.1.0"

@@ -13,12 +13,6 @@ inputs:
     description: 'The branch to deploy the built website to'
     default: 'gh-pages'
     required: true
-  commit-name:
-    description: 'The name of the user doing the deploy commit'
-    required: true
-  commit-email:
-    description: 'The email of the user doing the deploy commit'
-    required: true
   commit-message:
     description: 'The commit message for the branch'
     default: 'Deployed using Blazing fast GitHub Pages deploy'

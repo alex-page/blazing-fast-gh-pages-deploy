@@ -1,22 +1,19 @@
 import * as core from '@actions/core';
+import * as github from '@actions/github';
 import * as gitHubPages from 'gh-pages';
 
 const repoToken = core.getInput('repo-token', {required: true});
-const commitName = core.getInput('commit-name', {required: true});
-const commitEmail = core.getInput('commit-email', {required: true});
 const siteDirectory = core.getInput('site-directory');
 const deployBranch = core.getInput('deploy-branch');
 const commitMessage = core.getInput('commit-message');
+
+console.log(JSON.stringify(github.context));
 
 gitHubPages.publish(
 	siteDirectory,
 	{
 		branch: deployBranch,
-		repo: `https://${repoToken}@github.com/alex-page/alex-page.git`,
-		user: {
-			name: commitName,
-			email: commitEmail
-		},
+		repo: `https://${repoToken}@github.com/${}.git`,
 		dotfiles: true,
 		message: commitMessage
 	},
