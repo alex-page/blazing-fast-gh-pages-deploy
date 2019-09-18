@@ -40,8 +40,6 @@ jobs:
         uses: alex-page/blazing-fast-gh-pages-deploy@v0.0.1
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          commit-name: 'Alex Page'
-          commit-email: 'alex@alexpage.com.au'
 ```
 
 
@@ -53,8 +51,6 @@ If you want a more custom experience you can add these values. For more detailed
 | --- | --- | --- | --- |
 | `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` | `true` |
 | `site-directory` | The site directory | `_site` | `true` |
-| `commit-name` | The name of the user doing the deploy commit | Alex Page | `true` |
-| `commit-email` | The email of the user doing the deploy commit | alex@alexpage.com.au | `true` |
 | `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `false` |
 
 
