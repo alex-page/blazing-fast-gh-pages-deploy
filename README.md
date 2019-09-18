@@ -47,7 +47,7 @@ jobs:
 
 If you want a more custom experience you can add these values. For more detailed explanation of the workflow file, check out the [GitHub documentation](https://help.github.com/en/articles/configuring-a-workflow#creating-a-workflow-file).
 
-| Setting | Description | Values | Required |
+| Setting | Description | Default value | Required |
 | --- | --- | --- | --- |
 | `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` | `true` |
 | `site-directory` | The site directory | `_site` | `true` |
