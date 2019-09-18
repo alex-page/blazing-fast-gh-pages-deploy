@@ -8,12 +8,17 @@ const deployBranch = core.getInput('deploy-branch');
 const commitMessage = core.getInput('commit-message');
 
 console.log(JSON.stringify(github.context));
+const GITHUB_ACTOR = 'a';
 
 gitHubPages.publish(
 	siteDirectory,
 	{
 		branch: deployBranch,
-		repo: `https://${repoToken}@github.com/${}.git`,
+		repo: `https://${repoToken}@github.com/a.git`,
+		user: {
+			name: GITHUB_ACTOR,
+			email: `${GITHUB_ACTOR}@users.noreply.github.com`
+		},
 		dotfiles: true,
 		message: commitMessage
 	},
