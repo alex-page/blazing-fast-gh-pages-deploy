@@ -37,7 +37,7 @@ jobs:
           npm run test
           npm run build
       - name: Deploy site to gh-pages branch
-        uses: alex-page/blazing-fast-gh-pages-deploy@v0.0.1
+        uses: alex-page/blazing-fast-gh-pages-deploy@v1.0.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
 ```
@@ -56,5 +56,6 @@ If you want a more custom experience you can add these values. For more detailed
 
 ## Release History
 
+- v1.0.0 - Remove required name and email. Fix breaking bug with incorrect repository URL.
 - v0.0.1 - TypesScript, use callback instead of async
 - v0.0.0 - Initial release

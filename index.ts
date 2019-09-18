@@ -9,9 +9,6 @@ const commitMessage = core.getInput('commit-message', {required: true});
 
 const {pusher, repository} = github.context.payload;
 
-console.log(`github.com/${repository && repository.full_name}.git`);
-console.log(pusher.name, pusher.email);
-
 gitHubPages.publish(
 	siteDirectory,
 	{
@@ -29,6 +26,6 @@ gitHubPages.publish(
 			core.setFailed(`❌ Failed to deploy to GitHub pages: ${siteDirectory} directory failed to push to ${deployBranch} branch\n${error}`);
 		}
 
-		console.log(`✅ Successfully deployed to GitHub pages: ${siteDirectory} directory pushed to ${deployBranch} branch`);
+		console.log(`✅ Successfully deployed to GitHub pages. The ${siteDirectory} directory has been pushed to ${deployBranch} branch`);
 	}
 );
