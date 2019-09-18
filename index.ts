@@ -3,11 +3,14 @@ import * as github from '@actions/github';
 import * as gitHubPages from 'gh-pages';
 
 const repoToken = core.getInput('repo-token', {required: true});
-const siteDirectory = core.getInput('site-directory');
-const deployBranch = core.getInput('deploy-branch');
-const commitMessage = core.getInput('commit-message');
+const siteDirectory = core.getInput('site-directory', {required: true});
+const deployBranch = core.getInput('deploy-branch', {required: true});
+const commitMessage = core.getInput('commit-message', {required: true});
 
 const {pusher, repository} = github.context.payload;
+
+console.log(`github.com/${repository && repository.full_name}.git`);
+console.log(pusher.name, pusher.email);
 
 gitHubPages.publish(
 	siteDirectory,
