@@ -3,7 +3,7 @@ description: '🔥 The most blazingest action to deploy your GitHub pages websit
 author: 'Alex Page <alex@alexpage.com.au>'
 inputs:
   repo-token:
-    description: 'The personal access token secret can be passed in using {{ secrets.GH_PAT }}'
+    description: 'The GITHUB_TOKEN secret'
     required: true
   site-directory:
     description: 'The directory for the built website'

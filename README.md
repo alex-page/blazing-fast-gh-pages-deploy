@@ -8,13 +8,13 @@
 This GitHub action uses JavaScript for maximum speed 🚀.
 > Using a [JavaScript action](https://help.github.com/en/articles/about-actions#javascript-actions) simplifies the action code and executes faster than a Docker container action. 
 
+No secrets needed. You only need to configure a workflow file.
+
 
 ## Usage
 
 1. Create a new workflow by adding `.github/workflows/deploy.yml` to your project.
-2. Create a [personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)
-3. [Create a secret](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables) containing the personal access token, call it `GH_PAT`
-4. Modify the [workflow options](#workflow-options) for your project
+2. Adjust the [workflow options](#workflow-options) for your project
 
 Here is an example `deploy.yml` file:
 
@@ -39,7 +39,7 @@ jobs:
       - name: Deploy site to gh-pages branch
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.0.0
         with:
-          repo-token: ${{ secrets.GH_PAT }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 
@@ -49,8 +49,8 @@ If you want a more custom experience you can add these values. For more detailed
 
 | Setting | Description | Default value | Required |
 | --- | --- | --- | --- |
-| `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` | `true` |
-| `site-directory` | The site directory | `_site` | `true` |
+| `repo-token` | The GITHUB_TOKEN secret  | `${{ secrets.GITHUB_TOKEN }}` | `true` |
+| `site-directory` | The directory for the built website | `_site` | `true` |
 | `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `true` |
 | `deploy-branch` | The branch to deploy the built website to | `gh-pages` | `true` |
 
