@@ -24,6 +24,7 @@ gitHubPages.publish(
 	error => {
 		if (error) {
 			core.setFailed(`❌ Failed to deploy to GitHub pages: ${siteDirectory} directory failed to push to ${deployBranch} branch\n${error}`);
+			return;
 		}
 
 		console.log(`✅ Successfully deployed to GitHub pages. The ${siteDirectory} directory has been pushed to ${deployBranch} branch`);
