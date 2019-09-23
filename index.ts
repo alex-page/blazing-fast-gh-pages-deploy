@@ -32,6 +32,7 @@ const repo = (repository && repository.name) || '';
 				error => {
 					if (error) {
 						reject(error);
+						return;
 					}
 
 					resolve();
