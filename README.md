@@ -56,6 +56,7 @@ If you want a more custom experience you can add these values. For more detailed
 
 ## Release History
 
+- v1.0.1 - Return on error
 - v1.0.0 - Remove required name and email. Fix breaking bug with incorrect repository URL.
 - v0.0.1 - TypesScript, use callback instead of async
 - v0.0.0 - Initial release
