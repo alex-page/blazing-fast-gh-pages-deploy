@@ -9,6 +9,8 @@ const commitMessage = core.getInput('commit-message', {required: true});
 
 const {head_commit: headCommit, repository} = github.context.payload;
 
+console.log(headCommit, repository);
+
 gitHubPages.publish(
 	siteDirectory,
 	{
