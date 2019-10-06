@@ -7,9 +7,9 @@ const siteDirectory = core.getInput('site-directory', {required: true});
 const deployBranch = core.getInput('deploy-branch', {required: true});
 const commitMessage = core.getInput('commit-message', {required: true});
 
-const {head_commit: headCommit, repository} = github.context.payload;
+const {head_commit: headCommit, repository, pusher} = github.context.payload;
 
-console.log(headCommit, repository);
+console.log(headCommit, repository, pusher);
 
 gitHubPages.publish(
 	siteDirectory,
