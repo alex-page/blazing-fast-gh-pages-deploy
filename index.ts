@@ -17,7 +17,7 @@ gitHubPages.publish(
 		branch: deployBranch,
 		repo: `https://${repoToken}@github.com/${repository && repository.full_name}.git`,
 		user: {
-			name: headCommit.author.name,
+			name: headCommit.author.username,
 			email: headCommit.author.email
 		},
 		dotfiles: true,
