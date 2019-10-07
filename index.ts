@@ -7,7 +7,9 @@ const siteDirectory = core.getInput('site-directory', {required: true});
 const deployBranch = core.getInput('deploy-branch', {required: true});
 const commitMessage = core.getInput('commit-message', {required: true});
 
-const {head_commit: headCommit, repository} = github.context.payload;
+const {actor, repository} = github.context.payload;
+
+console.log( github.context );
 
 gitHubPages.publish(
 	siteDirectory,
@@ -15,8 +17,8 @@ gitHubPages.publish(
 		branch: deployBranch,
 		repo: `https://${repoToken}@github.com/${repository && repository.full_name}.git`,
 		user: {
-			name: headCommit.author.username,
-			email: headCommit.author.email
+			name: actor,
+			email: `${actor}@users.noreply.github.com`
 		},
 		dotfiles: true,
 		message: commitMessage
