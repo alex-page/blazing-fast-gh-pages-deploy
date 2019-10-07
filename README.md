@@ -56,7 +56,8 @@ If you want a more custom experience you can add these values. For more detailed
 
 ## Release History
 
-- v1.0.2 - Use actor for when there is no push
+- v1.0.3 - Use actor for when there is no push
+- v1.0.2 - Use head_commit for when there is no push
 - v1.0.1 - Return on error
 - v1.0.0 - Remove required name and email. Fix breaking bug with incorrect repository URL.
 - v0.0.1 - TypesScript, use callback instead of async
