@@ -37,7 +37,7 @@ jobs:
           npm run test
           npm run build
       - name: Deploy site to gh-pages branch
-        uses: alex-page/blazing-fast-gh-pages-deploy@v1.0.2
+        uses: alex-page/blazing-fast-gh-pages-deploy@v1.0.3
         with:
           repo-token: ${{ secrets.GH_PAT }}
 ```
@@ -56,7 +56,7 @@ If you want a more custom experience you can add these values. For more detailed
 
 ## Release History
 
-- v1.0.3 - Use actor for when there is no push
+- v1.0.3 - Use environment variable for repository
 - v1.0.2 - Use head_commit for when there is no push
 - v1.0.1 - Return on error
 - v1.0.0 - Remove required name and email. Fix breaking bug with incorrect repository URL.
