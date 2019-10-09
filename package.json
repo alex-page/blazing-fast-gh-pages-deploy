@@ -5,8 +5,8 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "watch": "ncc build index.ts --watch --minify",
-    "build": "ncc build index.ts --minify",
+    "watch": "ncc build index.js --watch --minify",
+    "build": "ncc build index.js --minify",
     "test": "xo"
   },
   "repository": {
@@ -29,10 +29,7 @@
   "homepage": "https://github.com/alex-page/automate-project-columns#readme",
   "dependencies": {
     "@actions/core": "^1.0.0",
-    "@actions/github": "^1.1.0",
-    "@types/gh-pages": "^2.0.0",
-    "gh-pages": "^2.1.1",
-    "last-commit-log": "^2.1.0"
+    "gh-pages": "^2.1.1"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.4",

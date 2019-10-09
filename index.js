@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import * as github from '@actions/github';
 import * as gitHubPages from 'gh-pages';
 
 const repoToken = core.getInput('repo-token', {required: true});
@@ -7,16 +6,16 @@ const siteDirectory = core.getInput('site-directory', {required: true});
 const deployBranch = core.getInput('deploy-branch', {required: true});
 const commitMessage = core.getInput('commit-message', {required: true});
 
-const {actor} = github.context;
+const {GITHUB_ACTOR, GITHUB_REPOSITORY} = process.env;
 
 gitHubPages.publish(
 	siteDirectory,
 	{
 		branch: deployBranch,
-		repo: `https://${repoToken}@github.com/${process.env.GITHUB_REPOSITORY}.git`,
+		repo: `https://${repoToken}@github.com/${GITHUB_REPOSITORY}.git`,
 		user: {
-			name: actor,
-			email: `${actor}@users.noreply.github.com`
+			name: GITHUB_ACTOR,
+			email: `${GITHUB_ACTOR}@users.noreply.github.com`
 		},
 		dotfiles: true,
 		message: commitMessage
