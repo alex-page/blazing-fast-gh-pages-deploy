@@ -50,9 +50,9 @@ If you want a more custom experience you can add these values. For more detailed
 | Setting | Description | Default value | Required |
 | --- | --- | --- | --- |
 | `repo-token` | The personal access token | `${{ secrets.GH_PAT }}` | `true` |
-| `site-directory` | The site directory | `_site` | `true` |
-| `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `true` |
-| `deploy-branch` | The branch to deploy the built website to | `gh-pages` | `true` |
+| `site-directory` | The site directory | `_site` | `false` |
+| `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `false` |
+| `deploy-branch` | The branch to deploy the built website to | `gh-pages` | `false` |
 
 ## Release History
 
