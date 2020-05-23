@@ -54,6 +54,14 @@ If you want a more custom experience you can add these values. For more detailed
 | `commit-message` | The commit message for the branch | Deployed using Blazing fast GitHub Pages deploy action | `false` |
 | `deploy-branch` | The branch to deploy the built website to | `gh-pages` | `false` |
 
+
+## Troubleshooting
+
+> "could not read Username for 'https://github.com': No such device or address"
+
+This is often related to the deployed site folder containing a `.git` directory. It is recommended to build the site to be deployed in a new folder for deployment.
+
+
 ## Release History
 
 - v1.1.0 - Use environment variables, remove @actions/github dependency, remove TypeScript
