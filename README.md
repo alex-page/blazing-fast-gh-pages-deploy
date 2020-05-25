@@ -59,7 +59,7 @@ If you want a more custom experience you can add these values. For more detailed
 
 > "could not read Username for 'https://github.com': No such device or address"
 
-This is often related to the deployed site folder containing a `.git` directory. It is recommended to build the site to be deployed in a new folder for deployment.
+This is often related to the deployed site folder containing a `.git` directory. It is recommended to build the site in a new folder for deployment.
 
 
 ## Release History
