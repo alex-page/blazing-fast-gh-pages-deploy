@@ -24,13 +24,13 @@ name: Blazing fast GitHub Pages deploy
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: npm install, test and build
         run: |
           npm install
