@@ -1,3 +1,7 @@
+**This Action is archived.** I recommend using [Custom GitHub Actions workflows](https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/) to deploy to GitHub pages. Here is a code [example of a migration](https://github.com/alex-page/alexpage.dev/commit/717efbcc57d0c8ce9f64d28526263610ea444823) off this GitHub action.
+
+
+
 # Blazing fast GitHub Pages deploy
 
 > 🔥 The most blazingest action to deploy your GitHub pages website
